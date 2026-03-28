@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI4S-YB | AI for Science · 崖州湾</title>
+    <meta
+      name="description"
+      content="AI4S-YB：AI for Science 崖州湾开源科研协作平台。用人工智能加速科学发现，欢迎加入我们。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Noto+Serif+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Animated particle canvas -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <header class="nav-bar" id="navbar">
+      <div class="nav-inner">
+        <a class="logo" href="#top" aria-label="回到顶部">
+          <span class="logo-icon">AI4S</span>
+          <span class="logo-divider"></span>
+          <span class="logo-text">崖州湾</span>
+        </a>
+        <nav class="nav-links" aria-label="主导航">
+          <a href="#vision">愿景</a>
+          <a href="#about">关于我们</a>
+          <a href="#work">在做什么</a>
+          <a href="#join">参与贡献</a>
+        </nav>
+        <a
+          class="nav-cta"
+          href="https://github.com/AI4S-YB"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ====== HERO ====== -->
+      <section class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content reveal">
+          <p class="hero-tagline">AI for Science · Open Collaboration</p>
+          <h1 class="hero-title">
+            用人工智能<br />
+            <span class="hero-accent">加速科学发现</span>
+          </h1>
+          <p class="hero-desc">
+            AI4S-YB 是一个扎根崖州湾的开源科研协作项目。我们相信，当 AI 与科学深度结合，<br class="hide-mobile" />
+            每一次计算都可能成为下一个突破的起点。
+          </p>
+          <div class="hero-buttons">
+            <a
+              class="btn btn-glow"
+              href="https://github.com/AI4S-YB"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>探索仓库</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#vision">
+              了解更多
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ====== VISION: AI FOR SCIENCE ====== -->
+      <section class="section" id="vision">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <span class="section-number">01</span>
+            <h2 class="section-title">什么是 AI for Science</h2>
+          </div>
+          <div class="vision-grid">
+            <div class="vision-text reveal">
+              <p class="text-large">
+                AI for Science（AI4S）是一种全新的科研范式：用机器学习、深度学习和大规模计算，
+                去理解和预测那些传统方法难以攻克的科学问题。
+              </p>
+              <p>
+                从蛋白质结构预测到气候模拟，从药物发现到材料设计，AI 正在成为科学家手中最强大的工具之一。
+                它不是替代科学，而是让科学家站得更高、看得更远。
+              </p>
+            </div>
+            <div class="vision-cards">
+              <div class="v-card reveal delay-1">
+                <div class="v-card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83"/></svg>
+                </div>
+                <h3>科学发现加速</h3>
+                <p>将传统需要数年的实验探索压缩到数周，让假设生成与验证进入快车道。</p>
+              </div>
+              <div class="v-card reveal delay-2">
+                <div class="v-card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <h3>跨学科融合</h3>
+                <p>打破物理、化学、生物、材料之间的壁垒，让数据和模型在学科之间自由流动。</p>
+              </div>
+              <div class="v-card reveal delay-3">
+                <div class="v-card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>开放协作</h3>
+                <p>科学的进步需要共享。开源代码、开放数据、透明流程，让全球研究者共同受益。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== ABOUT: 崖州湾 ====== -->
+      <section class="section section-dark" id="about">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <span class="section-number">02</span>
+            <h2 class="section-title">关于崖州湾 AI4S 项目</h2>
+          </div>
+          <div class="about-layout">
+            <div class="about-main reveal">
+              <p class="text-large">
+                崖州湾科技城坐落于海南三亚，是中国面向深海、深空与南繁育种的国家级科创高地。
+                AI4S-YB 项目正是在这片热土上生长出来的开源科研协作计划。
+              </p>
+              <p>
+                我们汇聚来自高校、科研院所与产业界的力量，围绕崖州湾的核心科研方向，
+                探索 AI 如何真正落地到科学研究的每一个环节——从数据采集到模型训练，
+                从实验设计到成果验证。
+              </p>
+              <p>
+                这不是一个封闭的实验室项目，而是一个向所有人开放的协作平台。
+                无论你是资深研究者还是刚入门的学生，都能在这里找到可以参与的方向。
+              </p>
+            </div>
+            <aside class="about-stats reveal delay-1">
+              <div class="stat-item">
+                <span class="stat-label">定位</span>
+                <span class="stat-value">开源科研协作</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">基地</span>
+                <span class="stat-value">三亚崖州湾</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">方向</span>
+                <span class="stat-value">AI × 自然科学</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">模式</span>
+                <span class="stat-value">完全开源</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== WHAT WE DO ====== -->
+      <section class="section" id="work">
+        <div class="section-inner">
+          <div class="section-header reveal">
+            <span class="section-number">03</span>
+            <h2 class="section-title">我们正在做什么</h2>
+          </div>
+          <p class="section-subtitle reveal">
+            以下是当前仓库中正在推进的几个核心方向。每个方向都有明确的目标和可参与的任务。
+          </p>
+          <div class="work-grid">
+            <article class="work-card reveal delay-1">
+              <div class="work-card-top">
+                <span class="work-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </span>
+                <span class="work-status">进行中</span>
+              </div>
+              <h3>核心算法与模型</h3>
+              <p>
+                开发和优化面向科学计算的 AI 模型，包括分子动力学模拟、蛋白质结构预测、
+                气候数据分析等方向的基础算法库。
+              </p>
+              <div class="work-tags">
+                <span>Deep Learning</span>
+                <span>Scientific Computing</span>
+              </div>
+            </article>
+            <article class="work-card reveal delay-2">
+              <div class="work-card-top">
+                <span class="work-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </span>
+                <span class="work-status">进行中</span>
+              </div>
+              <h3>数据集与基准测试</h3>
+              <p>
+                整理、清洗并开放科研数据集，建立标准化的基准测试流程，
+                让研究成果可复现、可比较、可迭代。
+              </p>
+              <div class="work-tags">
+                <span>Open Data</span>
+                <span>Benchmarks</span>
+              </div>
+            </article>
+            <article class="work-card reveal delay-3">
+              <div class="work-card-top">
+                <span class="work-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </span>
+                <span class="work-status">进行中</span>
+              </div>
+              <h3>文档与教程体系</h3>
+              <p>
+                从零开始搭建完整的文档体系，包括快速上手指南、API 文档、
+                研究笔记和实验复现教程，降低参与门槛。
+              </p>
+              <div class="work-tags">
+                <span>Documentation</span>
+                <span>Tutorials</span>
+              </div>
+            </article>
+            <article class="work-card reveal delay-4">
+              <div class="work-card-top">
+                <span class="work-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </span>
+                <span class="work-status">规划中</span>
+              </div>
+              <h3>可视化与 Demo</h3>
+              <p>
+                构建交互式的可视化工具和在线 Demo，让非技术背景的研究者
+                也能直观地理解模型能力和实验结果。
+              </p>
+              <div class="work-tags">
+                <span>Visualization</span>
+                <span>Interactive Demo</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== JOIN ====== -->
+      <section class="section section-cta" id="join">
+        <div class="section-inner">
+          <div class="cta-glow" aria-hidden="true"></div>
+          <div class="section-header reveal">
+            <span class="section-number">04</span>
+            <h2 class="section-title">加入我们</h2>
+          </div>
+          <p class="section-subtitle reveal">
+            无论你擅长什么，这里都有你可以贡献的方向。科学不应该有门槛，协作不应该有围墙。
+          </p>
+          <div class="join-grid">
+            <div class="join-card reveal delay-1">
+              <div class="join-num">01</div>
+              <h3>写代码</h3>
+              <p>贡献算法实现、优化性能、修复 Bug、审查 PR。查看我们的 Issues 列表，找到适合你的任务。</p>
+              <a
+                class="join-link"
+                href="https://github.com/AI4S-YB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                查看 Issues
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <div class="join-card reveal delay-2">
+              <div class="join-num">02</div>
+              <h3>写文档</h3>
+              <p>完善教程、翻译文档、整理研究笔记、编写 FAQ。好的文档能帮助更多人参与进来。</p>
+              <a
+                class="join-link"
+                href="https://github.com/AI4S-YB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                文档贡献指南
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <div class="join-card reveal delay-3">
+              <div class="join-num">03</div>
+              <h3>提想法</h3>
+              <p>在 Discussions 中分享你的研究思路、使用反馈、合作意向，或者单纯聊聊 AI4S 的未来。</p>
+              <a
+                class="join-link"
+                href="https://github.com/AI4S-YB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                发起讨论
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <div class="join-card reveal delay-4">
+              <div class="join-num">04</div>
+              <h3>做实验</h3>
+              <p>用我们的工具和数据集跑实验、写报告、提交结果。你的每一次实验都在推动科学前进。</p>
+              <a
+                class="join-link"
+                href="https://github.com/AI4S-YB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                快速开始
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="cta-bottom reveal">
+            <a
+              class="btn btn-glow btn-large"
+              href="https://github.com/AI4S-YB"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>前往 GitHub 开始协作</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-icon logo-icon-sm">AI4S</span>
+          <span>AI for Science · 崖州湾</span>
+        </div>
+        <p class="footer-note">
+          Open Source · Open Science · Open Future
+        </p>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> AI4S-YB.
+          Built with curiosity.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
