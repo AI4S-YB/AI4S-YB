@@ -2,7 +2,6 @@
    AI4S-YB Landing Page — Script
    ============================================ */
 
-// ---- Intersection Observer for reveal animations ----
 const revealItems = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -17,9 +16,7 @@ const revealObserver = new IntersectionObserver(
 );
 revealItems.forEach((item) => revealObserver.observe(item));
 
-// ---- Navbar scroll effect ----
 const navbar = document.getElementById("navbar");
-let lastScroll = 0;
 
 function onScroll() {
   const y = window.scrollY;
@@ -28,21 +25,19 @@ function onScroll() {
   } else {
     navbar.classList.remove("scrolled");
   }
-  lastScroll = y;
 }
 
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-// ---- Year in footer ----
 const yearEl = document.getElementById("current-year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-// ---- Particle Canvas ----
 const canvas = document.getElementById("particle-canvas");
 if (canvas) {
   const ctx = canvas.getContext("2d");
-  let w, h;
+  let w;
+  let h;
   let particles = [];
   const PARTICLE_COUNT = 80;
   const CONNECTION_DIST = 140;
@@ -56,7 +51,7 @@ if (canvas) {
 
   function createParticles() {
     particles = [];
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
+    for (let i = 0; i < PARTICLE_COUNT; i += 1) {
       particles.push({
         x: Math.random() * w,
         y: Math.random() * h,
@@ -72,9 +67,8 @@ if (canvas) {
     if (!isVisible) return;
     ctx.clearRect(0, 0, w, h);
 
-    // Draw connections
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
+    for (let i = 0; i < particles.length; i += 1) {
+      for (let j = i + 1; j < particles.length; j += 1) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -90,26 +84,24 @@ if (canvas) {
       }
     }
 
-    // Draw particles
-    for (const p of particles) {
-      p.x += p.vx;
-      p.y += p.vy;
+    particles.forEach((particle) => {
+      particle.x += particle.vx;
+      particle.y += particle.vy;
 
-      if (p.x < -10) p.x = w + 10;
-      if (p.x > w + 10) p.x = -10;
-      if (p.y < -10) p.y = h + 10;
-      if (p.y > h + 10) p.y = -10;
+      if (particle.x < -10) particle.x = w + 10;
+      if (particle.x > w + 10) particle.x = -10;
+      if (particle.y < -10) particle.y = h + 10;
+      if (particle.y > h + 10) particle.y = -10;
 
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 229, 204, ${p.opacity})`;
+      ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0, 229, 204, ${particle.opacity})`;
       ctx.fill();
-    }
+    });
 
     animationId = requestAnimationFrame(draw);
   }
 
-  // Pause when tab is not visible
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       isVisible = false;
@@ -120,7 +112,6 @@ if (canvas) {
     }
   });
 
-  // Check prefers-reduced-motion
   const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   if (!motionQuery.matches) {
     resize();
@@ -133,12 +124,11 @@ if (canvas) {
   }
 }
 
-// ---- Smooth anchor scroll for nav links ----
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
+  anchor.addEventListener("click", (event) => {
     const target = document.querySelector(anchor.getAttribute("href"));
     if (target) {
-      e.preventDefault();
+      event.preventDefault();
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
