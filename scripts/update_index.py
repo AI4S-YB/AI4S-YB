@@ -44,6 +44,15 @@ def fetch_org() -> dict:
     return resp.json()
 
 
+def normalize_base_url(base_url: str) -> str:
+    base_url = base_url.rstrip("/")
+    for suffix in ("/v1/messages", "/messages", "/v1"):
+        if base_url.endswith(suffix):
+            base_url = base_url[: -len(suffix)]
+            break
+    return base_url
+
+
 def generate_html(repos: list[dict], org: dict, model: str) -> str:
     repos_data = [
         {
@@ -102,8 +111,9 @@ def generate_html(repos: list[dict], org: dict, model: str) -> str:
     kwargs = {"api_key": os.environ["ANTHROPIC_API_KEY"]}
     base_url = os.getenv("ANTHROPIC_BASE_URL")
     if base_url:
-        # SDK appends /messages itself; strip trailing /messages if user pasted the full endpoint
-        base_url = re.sub(r"/messages$", "", base_url.rstrip("/"))
+        # The SDK appends `/v1/messages`, so accept values like
+        # `http://host`, `http://host/v1`, or `http://host/v1/messages`.
+        base_url = normalize_base_url(base_url)
         kwargs["base_url"] = base_url
         print(f"  Using base_url: {base_url}")
     client = anthropic.Anthropic(**kwargs)
