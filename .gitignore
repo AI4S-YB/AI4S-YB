@@ -1,0 +1,5 @@
+.claude/
+.cursor/
+.vscode/
+.codex
+scripts/__pycache__/
