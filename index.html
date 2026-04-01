@@ -30,7 +30,7 @@
           <a href="#vision">愿景</a>
           <a href="#about">关于我们</a>
           <a href="#work">在做什么</a>
-          <a href="#repositories">仓库目录</a>
+          <a href="#repos">开源仓库</a>
           <a href="#join">参与贡献</a>
         </nav>
         <a
@@ -208,53 +208,20 @@
         </div>
       </section>
 
-      <section class="section section-dark" id="repositories">
+      <!-- ====== REPOS (auto-generated) ====== -->
+      <section class="section section-dark" id="repos">
         <div class="section-inner">
           <div class="section-header reveal">
             <span class="section-number">04</span>
-            <h2 class="section-title">当前仓库目录</h2>
+            <h2 class="section-title">开源仓库</h2>
           </div>
           <p class="section-subtitle reveal">
-            这里汇总了 AI4S-YB 组织当前公开的主要仓库，方便新访客快速理解每个项目的定位、技术栈与使用入口。
+            以下是 AI4S-YB 在 GitHub 上的最新开源项目，由 AI 自动分析更新。
           </p>
-
-          <div class="repo-overview reveal">
-            <div class="repo-overview-main">
-              <p class="text-large">
-                这里同步展示 AI4S-YB 组织当前所有公开仓库，涵盖核心科研应用、算法重实现、流程工具与组织基础设施。
-              </p>
-              <p>
-                如果你刚开始了解 AI4S-YB，建议先看 <strong>scAgent</strong>、<strong>pineapplehub</strong>、
-                <strong>tune</strong> 和 <strong>citebox</strong>。其中 fork 仓库会单独标注，方便你快速区分原创项目与组织内维护的上游延伸工作。
-              </p>
-            </div>
-            <div class="repo-overview-stats">
-              <div class="repo-stat"><span class="repo-stat-value">15</span><span class="repo-stat-label">公开仓库</span></div>
-              <div class="repo-stat"><span class="repo-stat-value">4</span><span class="repo-stat-label">核心项目</span></div>
-              <div class="repo-stat"><span class="repo-stat-value">7+</span><span class="repo-stat-label">技术方向</span></div>
-            </div>
-          </div>
-
-          <div class="repo-grid">
-            <article class="repo-card reveal delay-1"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge repo-badge-featured">核心项目</span><span class="repo-badge">Rust</span></div><h3>pineapplehub</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/pineapplehub" target="_blank" rel="noreferrer">GitHub</a></div><p>基于纯 Rust 和 WASM 的菠萝果实品质测量应用，面向农业表型分析与轻量化部署场景。</p></article>
-            <article class="repo-card reveal delay-2"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge repo-badge-featured">核心项目</span><span class="repo-badge">Go</span></div><h3>scAgent</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/scAgent" target="_blank" rel="noreferrer">GitHub</a></div><p>面向生物学研究者的无代码单细胞分析工具，强调把 LLM Agent 与 scRNA-seq 分析流程结合起来。</p></article>
-            <article class="repo-card reveal delay-3"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge repo-badge-featured">核心项目</span><span class="repo-badge">Python</span></div><h3>tune</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/tune" target="_blank" rel="noreferrer">GitHub</a></div><p>围绕模型调参与实验迭代的 Python 项目，适合承载算法试验、评估脚本与参数搜索流程。</p></article>
-            <article class="repo-card reveal delay-4"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge repo-badge-featured">核心项目</span><span class="repo-badge">Go + SQLite</span><span class="repo-badge repo-badge-fork">Fork</span></div><h3>citebox</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/citebox" target="_blank" rel="noreferrer">GitHub</a></div><p>轻量自托管论文管理工具，支持 PDF 论文整理、图像提取、分组与标签化；当前以组织 fork 形式持续维护，适合科研资料管理。</p></article>
-            <article class="repo-card reveal delay-1"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">工具链</span><span class="repo-badge">TypeScript</span></div><h3>deadline</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/deadline" target="_blank" rel="noreferrer">GitHub</a></div><p>用于处理时间节点与任务推进的 TypeScript 工具仓库，可作为研究项目节奏管理的基础模块。</p></article>
-            <article class="repo-card reveal delay-2"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">算法重实现</span><span class="repo-badge">Java</span></div><h3>cpc2-java</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/cpc2-java" target="_blank" rel="noreferrer">GitHub</a></div><p>CPC2 的 Java 重实现，适合在 Java 生态中复用经典生物信息学算法。</p></article>
-            <article class="repo-card reveal delay-3"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">算法重实现</span><span class="repo-badge">Rust</span></div><h3>cpc2-rs</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/cpc2-rs" target="_blank" rel="noreferrer">GitHub</a></div><p>CPC2 的 Rust 版本实现，面向更高性能、更轻量的生信工具链集成场景。</p></article>
-            <article class="repo-card reveal delay-4"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">组织站点</span><span class="repo-badge">HTML</span></div><h3>AI4S-YB</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/AI4S-YB" target="_blank" rel="noreferrer">GitHub</a></div><p>当前 GitHub Pages 站点源码仓库，用于承载组织主页、导航结构与对外展示内容。</p></article>
-            <article class="repo-card reveal delay-1"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">基础设施</span><span class="repo-badge">Org</span></div><h3>.github</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/.github" target="_blank" rel="noreferrer">GitHub</a></div><p>组织级配置仓库，可集中维护默认文档、社区规范和协作入口，是开源流程的基础设施层。</p></article>
-            <article class="repo-card reveal delay-2"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">自动化脚本</span><span class="repo-badge">Shell</span></div><h3>Balabababa</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/Balabababa" target="_blank" rel="noreferrer">GitHub</a></div><p>一个轻量脚本仓库，当前描述聚焦“自动扒拉”式的数据或流程抓取，适合作为快速实验和自动化原型的落脚点。</p></article>
-            <article class="repo-card reveal delay-3"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">科研助手</span><span class="repo-badge">Python</span></div><h3>bioinfo_lackey</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/bioinfo_lackey" target="_blank" rel="noreferrer">GitHub</a></div><p>面向生物信息学日常工作的 Python 助手型仓库，适合沉淀零散但高频的分析脚本与自动化能力。</p></article>
-            <article class="repo-card reveal delay-4"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">流程工具</span><span class="repo-badge">Java</span></div><h3>minimap2IR</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/minimap2IR" target="_blank" rel="noreferrer">GitHub</a></div><p>用于在特定基因组中检测 IR 区域的简洁流程工具，适合叶绿体或相关结构分析任务。</p></article>
-            <article class="repo-card reveal delay-1"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">算法重实现</span><span class="repo-badge">Java</span></div><h3>MCScanX-Java</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/MCScanX-Java" target="_blank" rel="noreferrer">GitHub</a></div><p>MCScanX 的 Java 重实现项目，预计承载共线性分析工具的现代化移植与后续扩展。</p></article>
-            <article class="repo-card reveal delay-2"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">代谢组学</span><span class="repo-badge">R</span><span class="repo-badge repo-badge-fork">Fork</span></div><h3>MetMiner</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/MetMiner" target="_blank" rel="noreferrer">GitHub</a></div><p>面向植物代谢组学与 ISF 解卷积的 Agentic 平台仓库，当前作为组织 fork 保留，便于围绕上游方案继续实验和适配。</p></article>
-            <article class="repo-card reveal delay-3"><div class="repo-card-top"><div><div class="repo-badges"><span class="repo-badge">流程工具</span><span class="repo-badge">Go</span></div><h3>YBclaw</h3></div><a class="repo-link" href="https://github.com/AI4S-YB/YBclaw" target="_blank" rel="noreferrer">GitHub</a></div><p>一个以 Go 为主的轻量仓库，目前公开信息较少，适合作为后续流程工具或自动化能力的扩展入口。</p></article>
-          </div>
+          <!-- AUTO_REPOS_START -->
+          <!-- AUTO_REPOS_END -->
         </div>
       </section>
-
       <section class="section section-cta" id="join">
         <div class="section-inner">
           <div class="cta-glow" aria-hidden="true"></div>
